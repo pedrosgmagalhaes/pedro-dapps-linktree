@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" fill="none">
+  <!-- Ashar mark -- cor clara oficial (dark mode) sobre fundo transparente -->
+  <circle cx="120" cy="120" r="80" stroke="#F5F4F1" stroke-width="1.2" opacity="0.5"/>
+  <circle cx="120" cy="120" r="74" stroke="#F5F4F1" stroke-width="0.8" opacity="0.35"/>
+  <line x1="120" y1="118" x2="120" y2="148" stroke="#F5F4F1" stroke-width="2" stroke-linecap="round"/>
+  <line x1="112" y1="126" x2="112" y2="138" stroke="#F5F4F1" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="128" y1="126" x2="128" y2="138" stroke="#F5F4F1" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M120,100 C122,106 124,112 124,116 C124,120 123,122 120,123 C117,122 116,120 116,116 C116,112 118,106 120,100 Z" fill="#F5F4F1"/>
+</svg>

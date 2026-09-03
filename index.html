@@ -1,0 +1,1275 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Pedro dApps · Links</title>
+  <meta name="description" content="Pedro Magalhães — Inteligência Artificial, Blockchain e programação. Site, blog, cursos, YouTube, comunidades e projetos em um só lugar.">
+  <meta name="theme-color" content="#080808">
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Pedro dApps · Links">
+  <meta property="og:description" content="IA · Blockchain · Programação — site, blog, cursos, YouTube e comunidade.">
+  <meta property="og:image" content="pedro_avatar.png">
+  <meta property="og:locale" content="pt_BR">
+
+  <style>
+    /* ============================================================
+       Pedro dApps — Link na bio
+       Identidade editorial dark + dourado (padrão da marca)
+       ============================================================ */
+
+    /* ---------- Fontes locais ---------- */
+    @font-face {
+      font-family: 'Anton';
+      src: url('fonts/anton-v27-latin-regular.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Manrope';
+      src: url('fonts/Manrope-VariableFont_wght.woff2') format('woff2');
+      font-weight: 200 800;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Playfair Display';
+      src: url('fonts/playfair-display-variable.woff2') format('woff2');
+      font-weight: 400 900;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    /* ---------- Tokens ---------- */
+    :root {
+      --bg: #080808;
+      --panel: rgba(13, 13, 12, 0.72);
+      --text: #f4f4f1;
+      --muted: rgba(244, 244, 241, 0.62);
+      --faint: rgba(244, 244, 241, 0.38);
+      --line: rgba(255, 255, 255, 0.09);
+      --line-strong: rgba(255, 255, 255, 0.2);
+      --accent: #c89b52;
+      --accent-rgb: 200, 155, 82;
+      --accent-soft: rgba(200, 155, 82, 0.12);
+      --accent-glow: rgba(200, 155, 82, 0.22);
+      --wa: #25d366;
+      --wa-soft: rgba(37, 211, 102, 0.1);
+      --font-display: 'Anton', Impact, sans-serif;
+      --font-body: 'Manrope', ui-sans-serif, system-ui, sans-serif;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --radius: 16px;
+      --ease: cubic-bezier(0.22, 0.68, 0.22, 1);
+    }
+
+    /* ---------- Reset ---------- */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { color-scheme: dark; -webkit-text-size-adjust: 100%; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-weight: 450;
+      line-height: 1.5;
+      min-height: 100svh;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    svg { display: block; }
+    ::selection { background: rgba(var(--accent-rgb), 0.32); color: #fff; }
+
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    /* ---------- Camadas de fundo ---------- */
+    .bg-layer { position: fixed; inset: 0; pointer-events: none; z-index: 0; }
+    .halo {
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(52rem 34rem at 50% -12%, rgba(var(--accent-rgb), 0.16), transparent 62%),
+        radial-gradient(40rem 26rem at 88% 108%, rgba(var(--accent-rgb), 0.07), transparent 60%),
+        radial-gradient(30rem 22rem at 4% 100%, rgba(255, 255, 255, 0.035), transparent 55%);
+    }
+    .grid-veil {
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.022) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.022) 1px, transparent 1px);
+      background-size: 56px 56px;
+      -webkit-mask-image: radial-gradient(60rem 46rem at 50% 0%, #000 20%, transparent 78%);
+      mask-image: radial-gradient(60rem 46rem at 50% 0%, #000 20%, transparent 78%);
+    }
+    .grain {
+      position: absolute; inset: 0;
+      opacity: 0.05;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+
+    /* ---------- Palco ---------- */
+    .stage {
+      position: relative; z-index: 1;
+      min-height: 100svh;
+      display: grid;
+      place-items: center;
+      padding: clamp(1.25rem, 4vw, 2.75rem) 1rem;
+    }
+    .sheet {
+      width: min(100%, 540px);
+      padding: clamp(1.6rem, 5vw, 2.6rem) clamp(1.15rem, 5vw, 2rem) 2rem;
+      border: 1px solid var(--line);
+      border-radius: calc(var(--radius) + 8px);
+      background: var(--panel);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      box-shadow:
+        0 30px 80px -30px rgba(0, 0, 0, 0.85),
+        0 0 0 1px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+      position: relative;
+      overflow: hidden;
+    }
+    .sheet::before {
+      content: "";
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(26rem 18rem at 50% -10%, rgba(var(--accent-rgb), 0.07), transparent 65%);
+      pointer-events: none;
+    }
+    .sheet > * { position: relative; }
+
+    /* ---------- Animação de entrada ---------- */
+    .reveal {
+      opacity: 0;
+      transform: translateY(14px);
+      animation: rise 0.8s var(--ease) forwards;
+      animation-delay: var(--d, 0s);
+    }
+    @keyframes rise {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; animation: none; }
+    }
+
+    /* ---------- Cabeçalho ---------- */
+    .mast { text-align: center; }
+    .avatar-ring {
+      width: 104px; height: 104px;
+      margin: 0 auto 1.1rem;
+      padding: 3px;
+      border-radius: 50%;
+      background: conic-gradient(from 210deg, rgba(var(--accent-rgb), 0.95), rgba(var(--accent-rgb), 0.12), rgba(var(--accent-rgb), 0.65), rgba(var(--accent-rgb), 0.05), rgba(var(--accent-rgb), 0.95));
+      box-shadow: 0 0 0 1px rgba(var(--accent-rgb), 0.28), 0 12px 40px -12px var(--accent-glow);
+      transition: box-shadow 0.4s var(--ease);
+    }
+    .avatar-ring:hover { box-shadow: 0 0 0 1px rgba(var(--accent-rgb), 0.5), 0 16px 52px -12px var(--accent-glow); }
+    .avatar-ring img {
+      width: 100%; height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      background: #0c0c0b;
+      border: 4px solid #0a0a09;
+    }
+
+    .name {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: clamp(2.35rem, 9vw, 3.1rem);
+      line-height: 0.98;
+      letter-spacing: 0.015em;
+      text-transform: uppercase;
+    }
+    .name .dot { color: var(--accent); }
+    .handle {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 0.7rem;
+      padding: 0.28rem 0.85rem;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      background: rgba(255, 255, 255, 0.025);
+    }
+    .handle::before {
+      content: "";
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 10px var(--accent);
+    }
+    .bio {
+      margin: 0.9rem auto 0;
+      max-width: 36ch;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+    .bio em {
+      font-family: var(--font-serif);
+      font-style: italic;
+      color: #e9e2d2;
+    }
+
+    /* ---------- CTA WhatsApp ---------- */
+    .wa-cta {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      margin-top: 1.4rem;
+      padding: 0.85rem 1.1rem;
+      border: 1px solid rgba(37, 211, 102, 0.32);
+      border-radius: 14px;
+      background: linear-gradient(180deg, rgba(37, 211, 102, 0.13), rgba(37, 211, 102, 0.05));
+      text-align: left;
+      transition: transform 0.3s var(--ease), border-color 0.3s var(--ease), box-shadow 0.3s var(--ease), background 0.3s var(--ease);
+    }
+    .wa-cta:hover {
+      transform: translateY(-2px);
+      border-color: rgba(37, 211, 102, 0.62);
+      background: linear-gradient(180deg, rgba(37, 211, 102, 0.18), rgba(37, 211, 102, 0.07));
+      box-shadow: 0 14px 34px -14px rgba(37, 211, 102, 0.35);
+    }
+    .wa-cta .ico { flex: 0 0 auto; color: var(--wa); }
+    .wa-cta .ico svg { width: 26px; height: 26px; }
+    .wa-cta .txt { flex: 1; min-width: 0; }
+    .wa-cta .lbl {
+      display: block;
+      font-size: 0.99rem;
+      font-weight: 800;
+      letter-spacing: 0.01em;
+    }
+    .wa-cta .sub {
+      display: block;
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-top: 1px;
+    }
+    .wa-cta .go { color: var(--wa); opacity: 0.7; transition: transform 0.3s var(--ease), opacity 0.3s var(--ease); }
+    .wa-cta:hover .go { transform: translate(2px, -2px); opacity: 1; }
+
+    /* ---------- Divisor ornamental ---------- */
+    .rule {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin: 1.7rem 0 0.2rem;
+      color: var(--line-strong);
+    }
+    .rule::before, .rule::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--line-strong));
+    }
+    .rule::after { background: linear-gradient(90deg, var(--line-strong), transparent); }
+    .rule i {
+      width: 6px; height: 6px;
+      transform: rotate(45deg);
+      border: 1px solid var(--accent);
+      background: rgba(var(--accent-rgb), 0.25);
+    }
+
+    /* ---------- Seções ---------- */
+    .sec { margin-top: 1.8rem; }
+    .sec-head {
+      display: flex;
+      align-items: baseline;
+      gap: 0.75rem;
+      padding: 0 0.25rem 0.55rem;
+    }
+    .sec-idx {
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      letter-spacing: 0.14em;
+      color: var(--accent);
+    }
+    .sec-title {
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 400;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--text);
+    }
+    .sec-rule { height: 1px; background: linear-gradient(90deg, var(--line-strong), transparent 78%); }
+
+    .rows { display: flex; flex-direction: column; }
+
+    /* ---------- Linhas de link ---------- */
+    .row {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      padding: 0.72rem 0.4rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.055);
+      transition: background 0.25s var(--ease), padding 0.25s var(--ease);
+      position: relative;
+      border-radius: 10px;
+    }
+    .rows .row:last-child { border-bottom: 0; }
+    .row:hover {
+      background: linear-gradient(90deg, var(--accent-soft), transparent 85%);
+      padding-left: 0.7rem;
+    }
+    .row:active { transform: scale(0.995); }
+
+    .row .ico {
+      flex: 0 0 auto;
+      width: 36px; height: 36px;
+      display: grid;
+      place-items: center;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.02);
+      color: var(--muted);
+      transition: color 0.25s var(--ease), border-color 0.25s var(--ease), background 0.25s var(--ease), transform 0.25s var(--ease);
+    }
+    .row:hover .ico {
+      color: var(--accent);
+      border-color: rgba(var(--accent-rgb), 0.45);
+      background: rgba(var(--accent-rgb), 0.1);
+      transform: translateY(-1px);
+    }
+    .row .ico svg { width: 17px; height: 17px; }
+
+    .row .txt { flex: 1; min-width: 0; }
+    .row .lbl {
+      display: block;
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.012em;
+      color: var(--text);
+      transition: color 0.25s var(--ease);
+    }
+    .row:hover .lbl { color: #fff; }
+    .row .sub {
+      display: block;
+      margin-top: 1px;
+      font-size: 0.78rem;
+      color: var(--muted);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .row .go {
+      flex: 0 0 auto;
+      color: var(--faint);
+      opacity: 0.55;
+      transform: translateX(-3px);
+      transition: color 0.25s var(--ease), opacity 0.25s var(--ease), transform 0.25s var(--ease);
+    }
+    .row .go svg { width: 16px; height: 16px; }
+    .row:hover .go {
+      color: var(--accent);
+      opacity: 1;
+      transform: translateX(1px);
+    }
+    .row.wa-row:hover .ico { color: var(--wa); border-color: rgba(37, 211, 102, 0.45); background: var(--wa-soft); }
+
+    /* ---------- Rodapé ---------- */
+    .foot { margin-top: 2rem; text-align: center; }
+    .foot-line {
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: rgba(var(--accent-rgb), 0.85);
+    }
+    .foot-line span { color: var(--accent); }
+    .foot-copy {
+      margin-top: 0.7rem;
+      font-size: 0.74rem;
+      color: var(--faint);
+    }
+    .foot-copy a { color: var(--muted); transition: color 0.25s var(--ease); }
+    .foot-copy a:hover { color: var(--accent); }
+
+    /* ---------- CTA e-mail fantasma no topo do footer ---------- */
+    .mail-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 1.1rem;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--muted);
+      padding: 0.45rem 1rem;
+      border: 1px dashed var(--line-strong);
+      border-radius: 999px;
+      transition: color 0.25s var(--ease), border-color 0.25s var(--ease), background 0.25s var(--ease);
+    }
+    .mail-link:hover {
+      color: var(--accent);
+      border-color: rgba(var(--accent-rgb), 0.55);
+      background: rgba(var(--accent-rgb), 0.06);
+    }
+    .mail-link svg { width: 14px; height: 14px; }
+
+    /* ---------- Destaque (curso) ---------- */
+    .feat-sec { margin-top: 1.9rem; }
+    .feat {
+      display: block;
+      overflow: hidden;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: #0b0b0a;
+      box-shadow: 0 20px 48px -26px rgba(0, 0, 0, 0.85);
+      transition: transform 0.4s var(--ease), border-color 0.4s var(--ease), box-shadow 0.4s var(--ease);
+    }
+    .feat:hover {
+      transform: translateY(-3px);
+      border-color: rgba(var(--accent-rgb), 0.5);
+      box-shadow: 0 28px 64px -28px rgba(var(--accent-rgb), 0.32);
+    }
+    .feat-media {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      background: #0b0b0a;
+    }
+    .feat-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.01);
+      filter: saturate(0.9) contrast(1.03);
+      transition: transform 0.9s var(--ease), filter 0.9s var(--ease);
+    }
+    .feat:hover .feat-media img { transform: scale(1.06); filter: saturate(1) contrast(1.03); }
+    .feat-shade {
+      position: absolute; inset: 0;
+      background:
+        linear-gradient(180deg, rgba(8, 8, 8, 0.06) 35%, rgba(8, 8, 8, 0.62) 100%),
+        linear-gradient(90deg, rgba(8, 8, 8, 0.3), transparent 60%);
+      pointer-events: none;
+    }
+    .feat-badge {
+      position: absolute;
+      top: 12px; left: 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.32rem 0.75rem;
+      border-radius: 999px;
+      border: 1px solid rgba(var(--accent-rgb), 0.42);
+      background: rgba(8, 8, 8, 0.6);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      color: #f2e3c2;
+      font-size: 0.66rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+    .feat-badge i {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 10px var(--accent);
+    }
+    .feat-body {
+      display: block;
+      padding: 1.05rem 1.15rem 1.15rem;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.018), transparent 30%), #0b0b0a;
+      position: relative;
+    }
+    .feat-body::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 1.15rem; right: 1.15rem;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(var(--accent-rgb), 0.55), rgba(var(--accent-rgb), 0.05));
+    }
+    .feat-kicker {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    .feat-kicker::before {
+      content: "";
+      width: 16px; height: 1px;
+      background: var(--accent);
+    }
+    .feat-title {
+      display: block;
+      margin-top: 0.45rem;
+      font-family: var(--font-display);
+      font-size: clamp(1.55rem, 6vw, 1.9rem);
+      line-height: 1;
+      text-transform: uppercase;
+      letter-spacing: 0.012em;
+      color: #fff;
+      transition: color 0.3s var(--ease);
+    }
+    .feat:hover .feat-title { color: #f2e3c2; }
+    .feat-sub {
+      display: block;
+      margin-top: 0.35rem;
+      font-size: 0.84rem;
+      color: var(--muted);
+    }
+    .feat-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-top: 0.65rem;
+    }
+    .feat-tag {
+      font-size: 0.64rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.28rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid var(--line-strong);
+      color: rgba(244, 244, 241, 0.88);
+      background: rgba(255, 255, 255, 0.03);
+    }
+    .feat-tag--gold {
+      border-color: rgba(var(--accent-rgb), 0.5);
+      color: #ecd9ab;
+      background: rgba(var(--accent-rgb), 0.08);
+    }
+    .feat-cta {
+      margin-top: 0.95rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      width: 100%;
+      padding: 0.72rem 1rem;
+      border-radius: 11px;
+      background: linear-gradient(180deg, #e6bd6e, #c89b52);
+      color: #0d0b07;
+      font-size: 0.86rem;
+      font-weight: 800;
+      letter-spacing: 0.03em;
+      box-shadow: 0 10px 24px -12px rgba(var(--accent-rgb), 0.75), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+      transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease), filter 0.3s var(--ease);
+    }
+    .feat:hover .feat-cta {
+      transform: translateY(-1px);
+      filter: brightness(1.05);
+      box-shadow: 0 14px 30px -12px rgba(var(--accent-rgb), 0.9), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+    }
+    .feat-cta svg { width: 14px; height: 14px; }
+    .feat-url {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: 0.6rem;
+      font-size: 0.72rem;
+      color: var(--faint);
+      letter-spacing: 0.02em;
+      transition: color 0.3s var(--ease);
+    }
+    .feat:hover .feat-url { color: var(--muted); }
+    .feat-url svg { width: 12px; height: 12px; }
+
+    /* ---------- Mini-destaque de projeto (10ContoAI) ---------- */
+    .projcard {
+      display: block;
+      position: relative;
+      padding: 1.15rem 1.15rem 1.15rem;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: linear-gradient(180deg, rgba(var(--accent-rgb), 0.08), rgba(255, 255, 255, 0.015) 55%), #0b0b0a;
+      overflow: hidden;
+      transition: transform 0.35s var(--ease), border-color 0.35s var(--ease), box-shadow 0.35s var(--ease);
+    }
+    .projcard:hover {
+      transform: translateY(-2px);
+      border-color: rgba(var(--accent-rgb), 0.5);
+      box-shadow: 0 22px 48px -26px rgba(var(--accent-rgb), 0.3);
+    }
+    .projcard::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 1.15rem; right: 1.15rem;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(var(--accent-rgb), 0.7), rgba(var(--accent-rgb), 0.04));
+    }
+    .projcard-top { display: flex; align-items: center; gap: 0.85rem; }
+    .projcard-ico {
+      flex: 0 0 auto;
+      width: 46px; height: 46px;
+      display: grid;
+      place-items: center;
+      border-radius: 13px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      background: rgba(255, 255, 255, 0.02);
+      overflow: hidden;
+      transition: transform 0.3s var(--ease), border-color 0.3s var(--ease);
+    }
+    .projcard:hover .projcard-ico { transform: translateY(-1px); border-color: rgba(var(--accent-rgb), 0.5); }
+    .projcard-ico img {
+      display: block;
+      width: 100%; height: 100%;
+      object-fit: contain;
+      padding: 7px;
+    }
+    .projcard-ico--cover img {
+      padding: 0;
+      object-fit: cover;
+    }
+    .projcard-id { flex: 1; min-width: 0; }
+    .projcard-kicker {
+      display: block;
+      font-size: 0.62rem;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    .projcard-name {
+      display: block;
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 6vw, 1.8rem);
+      line-height: 1;
+      text-transform: uppercase;
+      letter-spacing: 0.012em;
+      color: #fff;
+      margin-top: 3px;
+      transition: color 0.3s var(--ease);
+    }
+    .projcard:hover .projcard-name { color: #f2e3c2; }
+    .projcard-badge {
+      margin-left: auto;
+      flex: 0 0 auto;
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #ecd9ab;
+      border: 1px solid rgba(var(--accent-rgb), 0.45);
+      border-radius: 999px;
+      padding: 0.32rem 0.7rem;
+      background: rgba(var(--accent-rgb), 0.08);
+      white-space: nowrap;
+    }
+    .projcard-desc {
+      display: block;
+      margin-top: 0.75rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      max-width: 46ch;
+    }
+    .projcard-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.8rem;
+    }
+    .projcard-chips .chip {
+      font-size: 0.64rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      padding: 0.26rem 0.62rem;
+      border-radius: 999px;
+      border: 1px solid var(--line-strong);
+      color: rgba(244, 244, 241, 0.85);
+      background: rgba(255, 255, 255, 0.03);
+      text-transform: uppercase;
+    }
+    .projcard-cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 0.95rem;
+      width: 100%;
+      padding: 0.68rem 1rem;
+      border-radius: 11px;
+      background: linear-gradient(180deg, #e6bd6e, #c89b52);
+      color: #0d0b07;
+      font-size: 0.85rem;
+      font-weight: 800;
+      letter-spacing: 0.03em;
+      box-shadow: 0 10px 24px -12px rgba(var(--accent-rgb), 0.75), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+      transition: transform 0.3s var(--ease), filter 0.3s var(--ease);
+    }
+    .projcard:hover .projcard-cta { transform: translateY(-1px); filter: brightness(1.06); }
+    .projcard-cta svg { width: 14px; height: 14px; }
+    .projcard-url {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      margin-top: 0.55rem;
+      font-size: 0.68rem;
+      color: var(--faint);
+      letter-spacing: 0.02em;
+      transition: color 0.3s var(--ease);
+    }
+    .projcard:hover .projcard-url { color: var(--muted); }
+    .projcard-url svg { width: 11px; height: 11px; }
+
+    /* ---------- Responsivo fino ---------- */
+    @media (max-width: 400px) {
+      .bio { font-size: 0.9rem; }
+      .row { gap: 0.7rem; padding: 0.66rem 0.3rem; }
+      .row .sub { font-size: 0.74rem; }
+    }
+  </style>
+
+  <!-- ══════════════════════════════════════════════════════════════════
+       Google Analytics 4 · Pedro dApps — Consent Mode v2 (LGPD)
+       Propriedade: "Pedro dApps — Sites e Cursos" · Stream: Links (links.pedrodapps.com)
+       Measurement ID: G-5TB99J4HM9
+       A coleta só acontece após o aceite no banner de consentimento.
+       ══════════════════════════════════════════════════════════════════ -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    (function () {
+      var granted = false;
+      try { granted = localStorage.getItem('pd_consent_v1') === 'granted'; } catch (e) {}
+      gtag('consent', 'default', {
+        ad_storage: granted ? 'granted' : 'denied',
+        ad_user_data: granted ? 'granted' : 'denied',
+        ad_personalization: granted ? 'granted' : 'denied',
+        analytics_storage: granted ? 'granted' : 'denied',
+        personalization_storage: granted ? 'granted' : 'denied',
+        functionality_storage: 'granted',
+        security_storage: 'granted',
+        wait_for_update: 500
+      });
+    })();
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5TB99J4HM9"></script>
+  <script>
+    gtag('js', new Date());
+    gtag('config', 'G-5TB99J4HM9', { anonymize_ip: true });
+  </script>
+</head>
+<body>
+
+  <!-- Fundo -->
+  <div class="bg-layer" aria-hidden="true">
+    <div class="halo"></div>
+    <div class="grid-veil"></div>
+    <div class="grain"></div>
+  </div>
+
+  <main class="stage">
+    <article class="sheet">
+
+      <!-- ══════════════ CABEÇALHO ══════════════ -->
+      <header class="mast">
+        <div class="avatar-ring reveal" style="--d:0.05s">
+          <img src="pedro_avatar.png" alt="Avatar de Pedro Magalhães, Pedro dApps" width="104" height="104">
+        </div>
+
+        <h1 class="name reveal" style="--d:0.12s">Pedro dApps<span class="dot">.</span></h1>
+
+        <span class="handle reveal" style="--d:0.18s">@pedro_dapps</span>
+
+        <p class="bio reveal" style="--d:0.24s">
+          Inteligência Artificial, Blockchain e programação — <em>explicados sem enrolação</em>.
+        </p>
+
+        <!--
+          ▸ Contato WhatsApp
+          Troque o href abaixo pelo link direto do número quando quiser:
+          https://wa.me/55DDD9XXXXXXXX
+        -->
+        <a class="wa-cta reveal" style="--d:0.3s"
+           href="https://chat.whatsapp.com/Io83KeSGCqyByd0jP5l3RX"
+           target="_blank" rel="noopener">
+          <span class="ico" aria-hidden="true">
+            <svg role="img" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </span>
+          <span class="txt">
+            <span class="lbl">Falar no WhatsApp</span>
+            <span class="sub">Contato oficial · resposta rápida</span>
+          </span>
+          <span class="go" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+          </span>
+        </a>
+      </header>
+
+      <div class="rule reveal" style="--d:0.34s" aria-hidden="true"><i></i></div>
+
+      <!-- ══════════════ 01 · CONTEÚDO ══════════════ -->
+      <section class="sec reveal" style="--d:0.38s" aria-label="Conteúdo">
+        <div class="sec-head">
+          <span class="sec-idx">01</span>
+          <h2 class="sec-title">Conteúdo</h2>
+        </div>
+
+        <div class="rows">
+          <a class="row" href="https://pedrodapps.com" target="_blank" rel="noopener">
+            <span class="ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </span>
+            <span class="txt">
+              <span class="lbl">Site oficial</span>
+              <span class="sub">pedrodapps.com · portfólio, projetos e imprensa</span>
+            </span>
+            <span class="go" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+            </span>
+          </a>
+
+          <a class="row" href="https://blog.pedrodapps.com" target="_blank" rel="noopener">
+            <span class="ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg>
+            </span>
+            <span class="txt">
+              <span class="lbl">Blog</span>
+              <span class="sub">blog.pedrodapps.com · análises de IA e blockchain</span>
+            </span>
+            <span class="go" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+            </span>
+          </a>
+
+          <a class="row" href="https://cursos.pedrodapps.com" target="_blank" rel="noopener">
+            <span class="ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            </span>
+            <span class="txt">
+              <span class="lbl">Cursos</span>
+              <span class="sub">cursos.pedrodapps.com · trilhas e aulas gratuitas</span>
+            </span>
+            <span class="go" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+            </span>
+          </a>
+        </div>
+      </section>
+
+      <!-- ══════════════ 02 · VÍDEOS & REDES ══════════════ -->
+      <section class="sec reveal" style="--d:0.44s" aria-label="Vídeos e redes sociais">
+        <div class="sec-head">
+          <span class="sec-idx">02</span>
+          <h2 class="sec-title">Vídeos &amp; Redes</h2>
+        </div>
+
+        <div class="rows">
+          <a class="row" href="https://www.youtube.com/@pedro_dapps" target="_blank" rel="noopener">
+            <span class="ico" aria-hidden="true">
+              <svg role="img" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </span>
+            <span class="txt">
+              <span class="lbl">Canal no YouTube</span>
+              <span class="sub">@pedro_dapps · IA, blockchain e programação</span>
+            </span>
+            <span class="go" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+            </span>
+          </a>
+
+          <a class="row" href="https://www.instagram.com/pedro_dapps/" target="_blank" rel="noopener">
+            <span class="ico" aria-hidden="true">
+              <svg role="img" viewBox="0 0 24 24" fill="currentColor"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg>
+            </span>
+            <span class="txt">
+              <span class="lbl">Instagram</span>
+              <span class="sub">@pedro_dapps · bastidores e novidades</span>
+            </span>
+            <span class="go" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+            </span>
+          </a>
+
+          <a class="row" href="https://x.com/pedro_dapps" target="_blank" rel="noopener">
+            <span class="ico" aria-hidden="true">
+              <svg role="img" viewBox="0 0 24 24" fill="currentColor"><path d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"/></svg>
+            </span>
+            <span class="txt">
+              <span class="lbl">X (Twitter)</span>
+              <span class="sub">@pedro_dapps · threads e opiniões</span>
+            </span>
+            <span class="go" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+            </span>
+          </a>
+
+          <a class="row" href="https://github.com/pedrosgmagalhaes" target="_blank" rel="noopener">
+            <span class="ico" aria-hidden="true">
+              <svg role="img" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            </span>
+            <span class="txt">
+              <span class="lbl">GitHub</span>
+              <span class="sub">github.com/pedrosgmagalhaes · código aberto</span>
+            </span>
+            <span class="go" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+            </span>
+          </a>
+        </div>
+      </section>
+
+      <!-- ══════════════ 03 · COMUNIDADE ══════════════ -->
+      <section class="sec reveal" style="--d:0.5s" aria-label="Comunidade">
+        <div class="sec-head">
+          <span class="sec-idx">03</span>
+          <h2 class="sec-title">Comunidade</h2>
+        </div>
+
+        <div class="rows">
+          <!--
+            ▸ Grupo no WhatsApp
+            Troque o href pelo convite novo quando o link expirar.
+          -->
+          <a class="row wa-row" href="https://chat.whatsapp.com/Io83KeSGCqyByd0jP5l3RX" target="_blank" rel="noopener">
+            <span class="ico" aria-hidden="true">
+              <svg role="img" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </span>
+            <span class="txt">
+              <span class="lbl">Grupo no WhatsApp</span>
+              <span class="sub">comunidade Pedro dApps · tecnologia sem spam</span>
+            </span>
+            <span class="go" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+            </span>
+          </a>
+
+          <a class="row" href="https://discord.com/invite/rWdYP2kYcP" target="_blank" rel="noopener">
+            <span class="ico" aria-hidden="true">
+              <svg role="img" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></svg>
+            </span>
+            <span class="txt">
+              <span class="lbl">Discord 10ContoAI</span>
+              <span class="sub">discord.gg/rWdYP2kYcP · devs e entusiastas de IA</span>
+            </span>
+            <span class="go" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+            </span>
+          </a>
+        </div>
+      </section>
+
+      <!-- ══════════════ 04 · PROJETOS ══════════════ -->
+      <section class="sec reveal" style="--d:0.56s" aria-label="Projetos">
+        <div class="sec-head">
+          <span class="sec-idx">04</span>
+          <h2 class="sec-title">Projetos</h2>
+        </div>
+
+        <div class="rows">
+          <!-- 10ContoAI — mini-destaque de projeto -->
+          <a class="projcard" href="https://app.10contoai.com" target="_blank" rel="noopener" aria-label="10ContoAI — abrir a central de IA">
+            <span class="projcard-top">
+              <span class="projcard-ico" aria-hidden="true">
+                <img src="logo-10contoai-sym.png" alt="" width="512" height="512">
+              </span>
+              <span class="projcard-id">
+                <span class="projcard-kicker">Projeto · Plataforma de IA</span>
+                <span class="projcard-name">10ContoAI</span>
+              </span>
+              <span class="projcard-badge">Em produção</span>
+            </span>
+            <span class="projcard-desc">Uma central completa de inteligência artificial: converse, fale, automatize e crie com os modelos mais avançados — a partir de R$ 10.</span>
+            <span class="projcard-chips" aria-hidden="true">
+              <span class="chip">Chat</span>
+              <span class="chip">Voz</span>
+              <span class="chip">Agentes</span>
+              <span class="chip">Imagem e vídeo</span>
+              <span class="chip">API</span>
+            </span>
+            <span class="projcard-cta">
+              Abrir a central de IA
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+            </span>
+            <span class="projcard-url">
+              app.10contoai.com
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg>
+            </span>
+          </a>
+
+          <!-- Ashar Finance — mini-destaque de projeto -->
+          <a class="projcard" style="margin-top: 0.9rem" href="https://ashar.finance" target="_blank" rel="noopener" aria-label="Ashar Finance — conhecer a plataforma">
+            <span class="projcard-top">
+              <span class="projcard-ico projcard-ico--cover" aria-hidden="true">
+                <img src="logo-ashar.png" alt="" width="180" height="180">
+              </span>
+              <span class="projcard-id">
+                <span class="projcard-kicker">Projeto · Infraestrutura financeira B2B</span>
+                <span class="projcard-name">Ashar Finance</span>
+              </span>
+              <span class="projcard-badge">Institucional</span>
+            </span>
+            <span class="projcard-desc">Infraestrutura B2B para finanças reguladas — conecta Instituições de Pagamento, VASPs e gestoras de fundos a custódia licenciada, pagamentos e compliance por meio de APIs.</span>
+            <span class="projcard-chips" aria-hidden="true">
+              <span class="chip">Custódia</span>
+              <span class="chip">Pagamentos</span>
+              <span class="chip">Compliance</span>
+              <span class="chip">USDC</span>
+            </span>
+            <span class="projcard-cta">
+              Conhecer a plataforma
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+            </span>
+            <span class="projcard-url">
+              ashar.finance
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg>
+            </span>
+          </a>
+        </div>
+      </section>
+
+      <!-- ══════════════ 05 · EM DESTAQUE ══════════════ -->
+      <section class="sec feat-sec reveal" style="--d:0.6s" aria-label="Cursos em destaque">
+        <div class="sec-head">
+          <span class="sec-idx">05</span>
+          <h2 class="sec-title">Em destaque</h2>
+        </div>
+
+        <!-- Curso de PIX do Brasil — destaque nº1 -->
+        <a class="feat" href="https://cursos.pedrodapps.com/cursos/pix-dotnet/" target="_blank" rel="noopener" aria-label="Curso de PIX do Brasil — gratuito">
+          <span class="feat-media">
+            <img src="thumb-pix-dotnet.jpg" alt="Thumbnail do Curso de PIX do Brasil" width="640" height="360" loading="lazy">
+            <span class="feat-shade" aria-hidden="true"></span>
+            <span class="feat-badge"><i aria-hidden="true"></i>Curso em destaque</span>
+          </span>
+          <span class="feat-body">
+            <span class="feat-kicker">Pagamentos · C#/.NET · 100% gratuito</span>
+            <span class="feat-title">Curso de PIX do Brasil</span>
+            <span class="feat-sub">Aprenda a integrar o PIX direto ou criar a sua própria solução — do BR Code à homologação no Banco Central.</span>
+            <span class="feat-meta">
+              <span class="feat-tag feat-tag--gold">Grátis + exclusivas</span>
+              <span class="feat-tag">C# / .NET</span>
+              <span class="feat-tag">Intermediário · Avançado</span>
+            </span>
+            <span class="feat-cta">
+              Acessar o curso
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+            </span>
+            <span class="feat-url">
+              cursos.pedrodapps.com/cursos/pix-dotnet
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg>
+            </span>
+          </span>
+        </a>
+
+        <!-- Curso de Agentes de IA — destaque nº2 -->
+        <a class="feat" style="margin-top:1rem" href="https://cursos.pedrodapps.com/cursos/agentes-ia/" target="_blank" rel="noopener" aria-label="Curso de Agentes de IA — gratuito">
+          <span class="feat-media">
+            <img src="thumb-agentes-ia.jpg" alt="Thumbnail do curso gratuito de Agentes de IA" width="640" height="360" loading="lazy">
+            <span class="feat-shade" aria-hidden="true"></span>
+            <span class="feat-badge"><i aria-hidden="true"></i>Também disponível</span>
+          </span>
+          <span class="feat-body">
+            <span class="feat-kicker">Inteligência Artificial · 100% gratuito</span>
+            <span class="feat-title">Agentes de IA</span>
+            <span class="feat-sub">Do zero ao seu primeiro agente — e ao certificado.</span>
+            <span class="feat-meta">
+              <span class="feat-tag feat-tag--gold">8 aulas</span>
+              <span class="feat-tag">4 módulos</span>
+              <span class="feat-tag">Projeto + certificado</span>
+            </span>
+            <span class="feat-cta">
+              Acessar o curso
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+            </span>
+            <span class="feat-url">
+              cursos.pedrodapps.com/cursos/agentes-ia
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg>
+            </span>
+          </span>
+        </a>
+      </section>
+
+      <!-- ══════════════ RODAPÉ ══════════════ -->
+      <footer class="foot">
+        <p class="foot-line reveal" style="--d:0.62s">IA<span>.</span> Blockchain<span>.</span> Criação<span>.</span></p>
+
+        <a class="mail-link reveal" style="--d:0.68s" href="mailto:p@pedrodapps.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+          p@pedrodapps.com
+        </a>
+
+        <p class="foot-copy reveal" style="--d:0.7s">
+          © <span data-year>2026</span> Pedro dApps · Inteligência Artificial e Blockchain
+        </p>
+      </footer>
+
+    </article>
+  </main>
+
+  <script>
+    // Ano dinâmico do rodapé
+    var el = document.querySelector('[data-year]');
+    if (el) el.textContent = String(new Date().getFullYear());
+  </script>
+
+  <!-- ══════════════════════════════════════════════════════════════════
+       Funil & eventos (GA4) · Pedro dApps — Links
+       Eventos: view_item (produtos/cursos), link_click e select_content
+       por seção. Só dispara após consentimento analytics_storage=granted.
+       Especificação completa: docs/Google Analytics 4 - Central de Medição.md
+       ══════════════════════════════════════════════════════════════════ -->
+  <script>
+    (function () {
+      var KEY = 'pd_consent_v1';
+      function hasConsent() {
+        try { return localStorage.getItem(KEY) === 'granted'; } catch (e) { return false; }
+      }
+      function send(name, params) {
+        if (!hasConsent()) return;
+        try { gtag('event', name, params || {}); } catch (e) {}
+      }
+      window.pdTrack = send;
+
+      function readLink(el) {
+        var section = '';
+        var sec = el.closest('.sec');
+        if (sec) {
+          var st = sec.querySelector('.sec-title');
+          if (st) section = st.textContent.trim();
+        }
+        var label = el.getAttribute('aria-label') || '';
+        var lbl = el.querySelector('.lbl, .projcard-name, .feat-title, .txt .lbl');
+        if (lbl && lbl.textContent) label = lbl.textContent.trim() || label;
+        var url = '';
+        try { url = new URL(el.href).host + new URL(el.href).pathname.replace(/\/$/, ''); }
+        catch (e) { url = el.href || ''; }
+        return { link_text: label, link_section: section, link_url: url };
+      }
+
+      /* Clicks em cards de projeto e destaques = micro-conversões com valor */
+      document.addEventListener('click', function (e) {
+        var t = e.target && e.target.closest ? e.target.closest('a') : null;
+        if (!t || !t.href) return;
+        var p = readLink(t);
+        if (t.classList.contains('projcard')) {
+          p.content_type = 'project';
+          p.content_id = p.link_url;
+          if (/10contoai\.com/.test(t.href)) { p.value = 10; p.currency = 'BRL'; } /* assinatura inicial 10ContoAI */
+          send('select_content', p);
+        } else if (t.classList.contains('feat')) {
+          p.content_type = 'course';
+          p.content_id = p.link_url;
+          send('select_content', p);
+        } else if (t.classList.contains('wa-cta')) {
+          p.content_type = 'whatsapp';
+          send('select_content', p);
+        } else if (t.classList.contains('mail-link')) {
+          p.content_type = 'email';
+          send('select_content', p);
+        } else if (t.classList.contains('row')) {
+          send('link_click', p);
+        }
+      }, true);
+
+      /* Visualização de item (e-commerce GA4) quando card entra na tela */
+      function viewItem(el, item) {
+        send('view_item', {
+          currency: 'BRL',
+          value: item.value || 0,
+          items: [{ item_id: item.id, item_name: item.name, item_category: item.cat, price: item.value || 0, quantity: 1 }]
+        });
+      }
+      var PROJECTS = {
+        'https://app.10contoai.com': { id: '10contoai', name: '10ContoAI', cat: 'SaaS IA', value: 10 },
+        'https://ashar.finance': { id: 'ashar', name: 'Ashar Finance', cat: 'Fintech B2B', value: 0 }
+      };
+      var COURSES = {
+        'https://cursos.pedrodapps.com/cursos/pix-dotnet/': { id: 'pix-dotnet', name: 'Curso de PIX do Brasil', cat: 'Curso', value: 0 },
+        'https://cursos.pedrodapps.com/cursos/agentes-ia/': { id: 'agentes-ia', name: 'Agentes de IA', cat: 'Curso', value: 0 }
+      };
+      function watch(els, fn) {
+        if (!els.length) return;
+        if (!('IntersectionObserver' in window)) { for (var i = 0; i < els.length; i++) fn(els[i]); return; }
+        var io = new IntersectionObserver(function (entries) {
+          for (var i = 0; i < entries.length; i++) {
+            if (entries[i].isIntersecting) { io.unobserve(entries[i].target); fn(entries[i].target); }
+          }
+        }, { threshold: 0.4 });
+        for (var j = 0; j < els.length; j++) io.observe(els[j]);
+      }
+      watch(document.querySelectorAll('a.projcard'), function (el) {
+        var m = PROJECTS[el.href];
+        if (m) viewItem(el, m);
+      });
+      watch(document.querySelectorAll('a.feat'), function (el) {
+        var m = COURSES[el.href];
+        if (m) viewItem(el, m);
+      });
+    })();
+  </script>
+
+  <!-- ══════════════ Banner de consentimento (LGPD) ══════════════ -->
+  <div id="pd-consent" role="dialog" aria-modal="false" aria-label="Aviso de cookies e privacidade" hidden>
+    <div class="pd-consent-inner">
+      <p class="pd-consent-title">Sua privacidade importa</p>
+      <p class="pd-consent-text">
+        Usamos o Google Analytics para entender como você usa este site e melhorar o conteúdo.
+        Os dados só são coletados após o seu aceite.
+        <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Saiba como o Google usa os dados</a>.
+      </p>
+      <div class="pd-consent-actions">
+        <button type="button" class="pd-consent-btn pd-consent-allow" data-pd-consent="granted">Aceitar</button>
+        <button type="button" class="pd-consent-btn pd-consent-deny" data-pd-consent="denied">Recusar</button>
+      </div>
+    </div>
+  </div>
+  <style>
+    #pd-consent{position:fixed;left:16px;right:16px;bottom:16px;z-index:2147483000;max-width:520px;margin:0 auto;background:rgba(10,10,9,.96);border:1px solid rgba(200,155,82,.28);border-radius:14px;box-shadow:0 18px 50px rgba(0,0,0,.55);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);color:#f4f4f1;font-family:ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;line-height:1.5}
+    #pd-consent[hidden]{display:none}
+    .pd-consent-inner{padding:18px 20px}
+    .pd-consent-title{margin:0 0 6px;font-size:15px;font-weight:700;letter-spacing:.02em}
+    .pd-consent-text{margin:0 0 14px;font-size:13px;color:rgba(244,244,241,.72)}
+    .pd-consent-text a{color:#d8b36e;text-decoration:underline}
+    .pd-consent-actions{display:flex;gap:8px;flex-wrap:wrap}
+    .pd-consent-btn{flex:1 1 auto;min-width:120px;padding:10px 14px;border-radius:10px;border:1px solid transparent;font-size:13.5px;font-weight:600;cursor:pointer;transition:filter .2s ease;color:#0b0b0a;font-family:inherit}
+    .pd-consent-btn:hover{filter:brightness(1.08)}
+    .pd-consent-allow{background:#c89b52}
+    .pd-consent-deny{background:transparent;border-color:rgba(255,255,255,.18);color:#f4f4f1}
+    .pd-consent-btn:focus-visible{outline:2px solid #c89b52;outline-offset:2px}
+    @media (max-width:480px){#pd-consent{left:10px;right:10px;bottom:10px}.pd-consent-inner{padding:16px}}
+  </style>
+  <script>
+    (function () {
+      var KEY = 'pd_consent_v1';
+      var banner = document.getElementById('pd-consent');
+      function read() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
+      function setConsent(val) {
+        try { localStorage.setItem(KEY, val); } catch (e) {}
+        try {
+          gtag('consent', 'update', val === 'granted'
+            ? { ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted', analytics_storage: 'granted', personalization_storage: 'granted', functionality_storage: 'granted', security_storage: 'granted' }
+            : { ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied', personalization_storage: 'denied', functionality_storage: 'granted', security_storage: 'granted' });
+        } catch (e) {}
+      }
+      if (banner && !read()) {
+        banner.hidden = false;
+        var btns = banner.querySelectorAll('[data-pd-consent]');
+        for (var i = 0; i < btns.length; i++) {
+          btns[i].addEventListener('click', function () {
+            var val = this.getAttribute('data-pd-consent');
+            setConsent(val);
+            banner.hidden = true;
+            if (val === 'granted') { setTimeout(function () { location.reload(); }, 250); }
+          });
+        }
+      }
+    })();
+  </script>
+</body>
+</html>
